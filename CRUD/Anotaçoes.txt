@@ -1,0 +1,142 @@
+Anotações
+
+NPM já instalado
+
+nesse projeto estamos instalando um api para consumo de backend
+
+Iniciar o projeto na pasta desejada comando npm init -y
+Vai cria o arquivo Packeg.json, onde sao criadas nossas dependencias
+
+Crias as dependencias do Json com comando npm i json-server
+
+"dependencies": {
+    "json-server": "^0.16.1"
+  }
+
+Criado uma api bem simples para consumo
+
+Instalando o Angular
+
+npm i -g @angular/cli
+
+criando um novo projeto 
+
+ng new nome-projeto --minimal
+
+
+
+ANATOMIA DO MODULO 
+
+DECLATION - Components
+            Diretivas
+            Pipes
+
+EXPORTS -   Components
+            Diretivas
+            Pipes
+
+Imports -   Modulo A
+            Modulo B 
+            Modulo C 
+
+Providers - Modulo A 
+            Modulo B 
+            Modulo C
+
+
+BOOTSTRAP - APPCOMPONET
+
+foi instalada a forma minimal do projeto, vamos utilizar dessa forma e criar gradativamente 
+os campos que precisamos
+
+entrar no arquivo angular.json e alterar para false os campos 
+
+"inlineTemplate": false,
+"inlineStyle": false,
+
+vamos utilziar o material para poder ter alguns atributos como no BOOTSTRAP
+para isso devemos instalar com o comando 
+
+ng add @angular/material
+
+depois precisamos importar os itens que serao usados no material 
+
+import { HeaderComponent } from './components/template/header/header.component';
+
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import{MatToolbarModule} from '@angular/material/toolbar';
+
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule
+  ],
+
+
+  depois vamos usar o comando o comando ng g c components/template/nome componente
+  assim sera gerada a estrutura da pagina em questao para trabalharmos, nao esquecer de importar os items
+
+
+import { FooterComponent } from './components/template/footer/footer.component';
+import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './views/home/home.component';
+
+
+lembrar de ir no app.components.ts tirar todos arquivos
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: 'app.component.html'    <<<<< incluir desta forma para chamar a pagina
+})
+export class AppComponent {
+  // title = 'frontend';
+}
+
+
+na app.components.html 
+
+teremos 
+
+<app-header></app-header>
+<app-nav></app-nav>
+<app-footer></app-footer>
+
+
+para criar rotas, onde podemos usar para click de um botao para trocar de pagina 
+
+vamos criar as paginas foi usado no exemplo a tela product e a home 
+
+vamos ter que criar os imports apontando para onde estao as paginas 
+
+
+import { HomeComponent } from './views/home/home.component';
+import { ProductCrudComponent } from './views/product-crud/product-crud.component'
+
+em seguida vamos colocar o path e o component na rota 
+
+
+const routes: Routes = [
+  {
+    path: "",
+    component: HomeComponent
+  },
+  {
+    path: "products",
+    component: ProductCrudComponent
+  }
+];
+
+
+na pagina principal vamos colocar a tag 
+
+<router-outlet></router-outlet>
+
+onde a troca de tela sera feita ... nos botoes temos que colocar routerLink='/nome no path '
