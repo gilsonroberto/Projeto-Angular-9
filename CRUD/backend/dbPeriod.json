@@ -1,0 +1,56 @@
+{
+  "Period": [
+      {
+          "id": 1,
+          "name": "Manhã",
+          "initalHour": "1900-01-01T06:00:00.000Z",
+          "finalyHour": "1900-01-01T11:59:59.900Z",
+          "companyId": 1,
+          "createdAt": "2020-06-03T16:31:00.000Z",
+          "updatedAt": "2020-06-03T16:31:00.000Z",
+          "Company": {
+              "fantasyName": "Confluence",
+              "companyName": "Confluence Ltda."
+          }
+      },
+      {
+          "id": 2,
+          "name": "Tarde",
+          "initalHour": "1900-01-01T12:00:00.000Z",
+          "finalyHour": "1900-01-01T17:59:59.900Z",
+          "companyId": 1,
+          "createdAt": "2020-06-03T16:31:00.000Z",
+          "updatedAt": "2020-06-03T16:31:00.000Z",
+          "Company": {
+              "fantasyName": "Confluence",
+              "companyName": "Confluence Ltda."
+          }
+      },
+      {
+          "id": 3,
+          "name": "Noite",
+          "initalHour": "1900-01-01T18:00:00.000Z",
+          "finalyHour": "1900-01-01T23:59:00.000Z",
+          "companyId": 3,
+          "createdAt": "2020-06-03T16:31:00.000Z",
+          "updatedAt": "2020-06-12T17:10:56.556Z",
+          "Company": {
+              "fantasyName": "Novo Nome",
+              "companyName": "Outro Informatica"
+          }
+      },
+      {
+          "id": 7,
+          "name": "Madrugada",
+          "initalHour": "1900-01-01T00:00:00.000Z",
+          "finalyHour": "1900-01-01T05:59:00.000Z",
+          "companyId": 1,
+          "createdAt": "2020-06-12T14:33:29.403Z",
+          "updatedAt": "2020-06-12T14:33:29.403Z",
+          "Company": {
+              "fantasyName": "Confluence",
+              "companyName": "Confluence Ltda."
+          }
+      }
+  ]
+}
