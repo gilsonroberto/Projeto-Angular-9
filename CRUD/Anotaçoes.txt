@@ -1,4 +1,5 @@
 Anotações
+https://www.hostinger.com.br/tutoriais/container-docker/
 
 docker run -p 3306:3306 --name mysql-mariadb -e MYSQL_ROOT_PASSWORD=root -d mariadb
 docker container exec 539bdec372f693f625c1ed830f82bd6b61f00a93ac3f0a0acb71c72a240ef3c5
